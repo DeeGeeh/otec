@@ -8,11 +8,9 @@ int main(int argc, char *argv[])
 {
     int i = 1;
     for (; i < argc; ++i) {
-        printf("%d: ", i);
-        printf("%s", argv[i]);
-        printf(" --> ");
+        printf("%d: %s --> ", i, argv[i]);
         muunna(argv[i]);
-        printf("\n");
+        printf("%s\n", argv[i]);
     }
     return 0;
 }
