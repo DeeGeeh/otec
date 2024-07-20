@@ -8,11 +8,7 @@
 #ifndef rectangle_h
 #define rectangle_h
 
-#define DEFAULT 0
-
 #include <stdio.h>
-#include <stdlib.h>
-
 
 typedef struct 
 {
