@@ -2,18 +2,6 @@
 #include <stdlib.h>
 #include "lista.h"
 
-unsigned int get_size(const DblLista *lista) {
-    unsigned int size = 0;
-    DblSolmu *node = lista->paa;
-    
-    while (node != NULL) {
-        size++;
-        node = node->seur;
-    }
-
-    return size;
-}
-
 DblSolmu *ds_luo(double data, DblSolmu *seur) {
     DblSolmu *ds = malloc(sizeof(DblSolmu));
     ds->data = data;
@@ -116,7 +104,6 @@ DblSolmu *dl_lisaa(DblLista *lista, size_t i, double data) {
 double dl_poista(DblLista *lista, size_t i) {
     DblSolmu *node = lista->paa;
     DblSolmu *temp;
-
     double data = 0;
     size_t count = 0;
 
@@ -126,7 +113,7 @@ double dl_poista(DblLista *lista, size_t i) {
     }
 
     /* first node */
-    if (i == 1) {
+    if (i == 0) {
         return dl_poistaEdesta(lista);
     }
 
