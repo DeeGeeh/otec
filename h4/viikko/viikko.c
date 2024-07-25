@@ -25,7 +25,7 @@ void viikko(int pv, int kk, int vuosi)
     mktime(&time_info);
 
     for (i = 0; i < WEEKDAYS; i++) {
-        strftime(date, BUFFER_SIZE, "%A %d.%B.%Y", &time_info);
+        strftime(date, BUFFER_SIZE, "%A %d. %B %Y", &time_info);
         printf("%s\n", date);
         time_info.tm_mday++;
         mktime(&time_info);
